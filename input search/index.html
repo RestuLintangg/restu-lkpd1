@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            margin-top: 10;
+            background-color: #f4f4f4;
+        }
+
+        .search-container {
+            text-align: center;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        input { 
+            padding: 10px;
+            width: 300px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-left: 10px;
+            background-color: #cbd6cd;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        
+        .result {
+            margin-top: 10px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search...">
+        <button onclick="displayText()">Submit</button>
+        <!-- on click (memanggil fungsi javascript ketika sebuah elemen diklik) -->
+        <div id="result" class="result"></div>
+    </div>
+
+    <script>
+        function displayText() {
+            const input = document.getElementById('searchInput'). value;
+            const resultDiv = document.getElementById('result');
+            resultDiv.textContent = ' mencari data ' + input + '...'; 
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <label for="image-select">Pilih Gambar:</label>
+    <select id="image-select">
+        <option value="image1.jpg">Gambar 1</option>
+        <option value="image2.jpg">Gambar 2</option>
+        <option value="image3.jpg">Gambar 3</option>
+    </select>
+
+    <label for="opacity-select">Pilih Opacity:</label>
+    <select id="opacity-select">
+        <option value="1">1</option>
+        <option value="0.5">0.5</option>
+        <option value="0.2">0.2</option>
+    </select>
+
+    <button onclick="updateImage()">Kirim</button>
+
+    <h2>Gambar Awal:</h2>
+    <img id="initial-image" src="image1.jpg" style="width:300px;">
+
+    <h2>Gambar Setelah Diubah:</h2>
+    <img id="changed-image" src="image1.jpg" style="width:300px; opacity: 1;">
+
+    
+    <script>
+        function updateImage() {
+            let imageSelect = document.getElementById("image-select");
+            let opacitySelect = document.getElementById("opacity-select");
+
+            let selectedImage = imageSelect.value;
+            let selectedOpacity = opacitySelect.value;
+
+            let changedImage = document.getElementById("changed-image");
+            changedImage.src = selectedImage;
+            changedImage.style.opacity = selectedOpacity;
+        }
+    </script>
+</body>
+</html>
